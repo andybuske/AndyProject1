@@ -1,0 +1,52 @@
+
+#cardFront {
+    text-align:center;
+    border: 5px solid blue;
+    height: 100px;
+    /* visibility: visible; */
+}
+
+#cardBack {
+    border: 3px solid red;
+    height: 100px;
+    /* visibility: hidden; */
+}
+
+#reset {
+    /* display: flex; */
+    /* flex-direction: row; */
+    align-items:center;
+}
+
+
+.button {
+    width: 100px;
+    height: 30px;
+}
+
+.buttonArea {
+    height: 60px;
+    display: flex;
+}
+
+.cardArea {
+    height: 300px;
+    border: 2px dashed black;
+}
+
+.categories {
+    height: 100px;
+}
+
+.header {
+    font-size: 50px;
+    text-align: center;
+}
+
+/* not sure if these are needed anymore
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+} */
