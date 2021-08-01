@@ -2,10 +2,10 @@
 
 /*  Pseudo-code
 Bronze version:
-- define front content
-- define back content
-- show front of card 1 & hide back of card
-- user clicks card:  hide front of card and show back of card
+- **define front content
+- **define back content
+- **show front of card 1 & hide back of card
+- **user clicks card:  hide front of card and show back of card
 - user clicks 'correct' button:
     - "remove" card from deck
     - proceed to next card
@@ -29,6 +29,8 @@ const resetButton = document.querySelector('#reset');
 cardFront.addEventListener('click', flipFB);
 cardBack.addEventListener('click', flipBF);
 
+
+
 /* testing get flip functionality to work
 const fBButton = document.querySelector('#testFront');
 const bFButton = document.querySelector('#testBack');
@@ -43,6 +45,7 @@ function flipBFTest () {
     cardBack.classList.toggle('visible')
 }
 */
+
 
 // Initial conditions
     cardBack.style.visibility = 'hidden';
@@ -62,7 +65,7 @@ function flipBF () {
 
 class Card {
     constructor(category, deck, question, answer, state, frontPic, backPic) {
-        this.category = 'default';
+        this.category = category;
         this.deck = deck;
         this.question = question;
         this.answer = answer;
@@ -72,8 +75,13 @@ class Card {
     }
 }
 
-const c1d1q1 = new Card('','Deck 1', 'What is the OUTPUT of the Develop Project Charter Process?', 'Project Charter');
+const card1 = new Card('Professional','PMP', 'What is the OUTPUT of the Develop Project Charter Process?', 'Project Charter');
+const card2 = new Card('Professional', 'PMP', 'What is the Triple Constraint?', `1. Scope <br> 2. Schedule <br> 3. Budget <br> (and Quality)`);
+const card3 = new Card('Professional', 'PMP', 'What are the 5 Process Groups?', `Initiating<br>Planning<br>Executing<br>Monitoring & Controlling<br>Closing`);
+const card4 = new Card('Professional', 'PMP', `TRUE or FALSE <br> Process Groups are the same as Project Phases.`, 'False');
 
-cardFront.innerText = c1d1q1.question;
-cardBack.innerText = c1d1q1.answer;
+
+
+cardFront.innerHTML = card3.question;
+cardBack.innerHTML = card3.answer;
 
