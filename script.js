@@ -2,16 +2,16 @@
 
 /*  Pseudo-code
 Bronze version:
-- **define front content
-- **define back content
-- **show front of card 1 & hide back of card
-- **user clicks card:  hide front of card and show back of card
-- user clicks 'correct' button:
-    - "remove" card from deck
-    - proceed to next card
-- user clicks 'incorrect button:
-    - place card in the back of the deck
-    - proceed to next card
+* define front content
+* define back content
+* show front of card 1 & hide back of card
+* user clicks card:  hide front of card and show back of card
+* user clicks 'correct' button:
+    * "remove" card from deck
+    * proceed to next card
+* user clicks 'incorrect button:
+    * place card in the back of the deck
+    * proceed to next card
 
 
 
@@ -23,6 +23,8 @@ const cardBack = document.querySelector('#cardBack')
 const corrButton = document.querySelector('#correct');
 const incorrButton = document.querySelector('#incorrect');
 const resetButton = document.querySelector('#reset');
+const score = document.querySelector('.score');
+const deckInfo = document.querySelector('.deckInfo');
 
 
 // Event Listeners
@@ -54,12 +56,15 @@ cardBack.style.visibility = 'hidden';
 
 // Setup
 let fullDeck = [];   // all Cards initially
-let badDeck = [];    // all Cards answered Incorrect
+// let badDeck = [];    // all Cards answered Incorrect
 
 
 // Functions
 function playPmpDeck () {     //specific to PMP Flashcards
     fullDeck = pmpDeck;
+    deckInfo.innerText = 'Category: ' + fullDeck[0].category + '\xa0\xa0\xa0\xa0\xa0\xa0Deck: ' + fullDeck[0].deck;
+    // deckInfo.innerHTML = `Category:  ${fullDeck[0].category}    /n    Deck: ${fullDeck[0].deck}`;
+    score.innerHTML = `Cards Remaining: ${fullDeck.length}`;
     nextCard();
 }
 
@@ -81,14 +86,18 @@ function flipBF() {
 
 function nextCard() {
     if (fullDeck.length > 0) {
+        cardFront.style.visibility = 'visible';
+        cardBack.style.visibility = 'hidden';
         cardFront.innerHTML = fullDeck[0].question;
         cardBack.innerHTML = fullDeck[0].answer;
     }
     else if (fullDeck.length == 0) {
         cardFront.innerHTML = '';
         cardBack.innerHTML = '';
+        score.innerHTML = `Cards Remaining: 0`;
         alert('You are all done!');
     }
+    score.innerHTML = `Cards Remaining: ${fullDeck.length}`;
 }
 
 function correct() {
@@ -129,7 +138,7 @@ const card5 = new Card('Professional', 'PMP', 'What are EEFs?', 'Enterprise Envi
 const card6 = new Card('Professional', 'PMP', 'What are OPAs?', 'Organizational Project Assets');
 const card7 = new Card('Professional', 'PMP', 'What are the Processes in the Initiating Process Group?', `Develop Project Charter<br>Identify Stakeholders`);
 const card8 = new Card('Professional', 'PMP', 'What are the INPUTS to the Collect Requirements Process?', `Scope Management Plan<br>Requirements Management Plan<br>Stakeholder Management Plan<br>Project Charter<br>Stakeholder Register`);
-const card9 = new Card('Professional', 'PMP', 'Project staff assignments and Resource calendars are OUTPUTS of which Process?', 'Acquire Project Team (part of Executing Process Group');
+const card9 = new Card('Professional', 'PMP', 'Project staff assignments and Resource calendars are OUTPUTS of which Process?', 'Acquire Project Team (part of Executing Process Group)');
 
 const pmpDeck = [card1,card2,card3,card4,card5,card6,card7,card8,card9];
 
