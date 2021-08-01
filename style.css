@@ -1,60 +1,71 @@
-
 #cardFront {
-    text-align: center;
-    border: 5px solid blue;
-    height: 200px;
-    /* visibility: visible; */
-    margin-top: 0px;
-    padding-top: 50px;
-    font-size: 150%;
-    
+  text-align: center;
+  border: 5px solid blue;
+  height: 200px;
+  /* visibility: visible; */
+  margin-top: 0px;
+  padding-top: 50px;
+  font-size: 150%;
 }
 
 #cardBack {
-    border: 3px solid red;
-    height: 235px;
-    /* visibility: hidden; */
-    margin-top: -285px;
-    font-size: 120%;
-    padding-top: 20px;
-    padding-left: 20px;
+  border: 3px solid red;
+  height: 235px;
+  /* visibility: hidden; */
+  margin-top: -285px;
+  font-size: 120%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#correct {
+  background-color: greenyellow;
+}
+
+#incorrect {
+  background-color: red;
 }
 
 #reset {
-    /* display: flex; */
-    /* flex-direction: row; */
-    align-items:center;
-    visibility: hidden;
+  /* display: flex; */
+  /* flex-direction: row; */
+  align-items: center;
+  visibility: hidden;
 }
 
-
 .button {
-    width: 100px;
-    height: 30px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
 }
 
 .buttonArea {
-    height: 60px;
-    display: flex;
+  height: 30px;
+  display: flex;
 }
 
 .cardArea {
-    height: 300px;
-    /* border: 2px dashed black; */
+  height: 300px;
+  /* border: 2px dashed black; */
 }
 
 .categories {
-    height: 50px;
+  height: 50px;
 }
 
 .deckInfo {
-    padding: 15px;
-    font-size: xx-large;
+  padding: 15px;
+  font-size: xx-large;
 }
 
 .header {
-    font-size: 50px;
-    text-align: center;
+  font-size: 50px;
+  text-align: center;
+}
+
+.score {
+  font-size: 20px;
+  text-align: center;
 }
 
 /* not sure if these are needed anymore

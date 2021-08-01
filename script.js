@@ -12,6 +12,18 @@ Bronze version:
 * user clicks 'incorrect button:
     * place card in the back of the deck
     * proceed to next card
+Silver version:
+- Multiple decks pre-loaded
+- Choose deck
+* Progress
+* Red/Green buttons
+- Buttons with 'check' and 'x'
+- Background image for deck
+- Fancy font
+- Reset button
+- Keyboard flip
+- 'Skip' button
+
 
 
 
