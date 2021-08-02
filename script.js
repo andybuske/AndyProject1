@@ -23,7 +23,15 @@ Silver version:
 - Reset button
 - Keyboard flip
 * 'Skip' button
-
+Gold version:
+- Add your own cards
+- Deck from an API
+- Animated flip
+- Show ?s on the back as well
+* end score: number incorrect
+- ? can be an image
+- move incorrect to random place in deck
+* 'Go Back' button
 
 
 
@@ -73,11 +81,10 @@ cardBack.style.visibility = 'hidden';
 
 // Setup
 let fullDeck = [];   // all Cards initially
-// let badDeck = [];    // all Cards answered Incorrect
 
 
 // Functions
-function playPmpDeck () {     //specific to PMP Flashcards
+function playPmpDeck() {     //specific to PMP Flashcards
     fullDeck = pmpDeck;
     deckInfo.innerText = 'Category: ' + fullDeck[0].category + '\xa0\xa0\xa0\xa0\xa0\xa0Deck: ' + fullDeck[0].deck;
     // deckInfo.innerHTML = `Category:  ${fullDeck[0].category}    /n    Deck: ${fullDeck[0].deck}`;
@@ -87,7 +94,7 @@ function playPmpDeck () {     //specific to PMP Flashcards
 
 // function buildDeck() {       //generic function that can later be used for any Deck
 //     for (let i=0; i<fullDeck; i++) {
-        
+
 //     }
 // }
 
@@ -117,7 +124,7 @@ function nextCard() {
         cardBack.innerHTML = '';
         score.innerHTML = `Cards Remaining: 0`;
         alert(
-        `            You are all done!
+            `            You are all done!
         You had ${incorrectCounter} incorrect cards.`);
     }
     score.innerHTML = `Cards Remaining: ${fullDeck.length}`;
@@ -136,7 +143,7 @@ function incorrect() {
 }
 
 function reset() {
-    const pmpDeck = [card1,card2,card3,card4,card5,card6,card7,card8,card9];
+    const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
     playPmpDeck();
 }
 
@@ -176,9 +183,7 @@ const card7 = new Card('Professional', 'PMP', 'What are the Processes in the Ini
 const card8 = new Card('Professional', 'PMP', 'What are the INPUTS to the Collect Requirements Process?', `Scope Management Plan<br>Requirements Management Plan<br>Stakeholder Management Plan<br>Project Charter<br>Stakeholder Register`);
 const card9 = new Card('Professional', 'PMP', 'Project staff assignments and Resource calendars are OUTPUTS of which Process?', 'Acquire Project Team (part of Executing Process Group)');
 
-const pmpDeck = [card1,card2,card3,card4,card5,card6,card7,card8,card9];
+const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
 
-// cardFront.innerHTML = card8.question;
-// cardBack.innerHTML = card8.answer;
 playPmpDeck();
 
