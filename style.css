@@ -34,9 +34,10 @@
 }
 
 .button {
-  width: 100px;
+  width: 120px;
   height: 30px;
   font-size: 15px;
+
 }
 
 .buttonArea {
@@ -50,7 +51,7 @@
 }
 
 .categories {
-  height: 50px;
+  height: 10px;
 }
 
 .deckInfo {
@@ -66,6 +67,10 @@
 .score {
   font-size: 20px;
   text-align: center;
+}
+
+.skipButtons {
+    margin-top: 15px;
 }
 
 /* not sure if these are needed anymore

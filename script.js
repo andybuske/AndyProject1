@@ -22,7 +22,7 @@ Silver version:
 - Fancy font
 - Reset button
 - Keyboard flip
-- 'Skip' button
+* 'Skip' button
 
 
 
@@ -37,6 +37,9 @@ const incorrButton = document.querySelector('#incorrect');
 const resetButton = document.querySelector('#reset');
 const score = document.querySelector('.score');
 const deckInfo = document.querySelector('.deckInfo');
+const skipButtonF = document.querySelector('#skipf');
+const skipButtonB = document.querySelector('#skipb');
+let incorrectCounter = 0;
 
 
 // Event Listeners
@@ -45,6 +48,8 @@ cardBack.addEventListener('click', flipBF);
 corrButton.addEventListener('click', correct);
 incorrButton.addEventListener('click', incorrect);
 resetButton.addEventListener('click', reset);
+skipButtonF.addEventListener('click', skipf);
+skipButtonB.addEventListener('click', skipb);
 
 
 /* testing get flip functionality to work
@@ -89,6 +94,8 @@ function playPmpDeck () {     //specific to PMP Flashcards
 function flipFB() {  //card flips once, but back does not display
     cardFront.style.visibility = 'hidden';
     cardBack.style.visibility = 'visible';
+    skipButtonB.disabled = true;
+    skipButtonF.disabled = true;
 
 }
 function flipBF() {
@@ -97,6 +104,8 @@ function flipBF() {
 }
 
 function nextCard() {
+    skipButtonF.disabled = false;
+    skipButtonB.disabled = false;
     if (fullDeck.length > 0) {
         cardFront.style.visibility = 'visible';
         cardBack.style.visibility = 'hidden';
@@ -107,7 +116,9 @@ function nextCard() {
         cardFront.innerHTML = '';
         cardBack.innerHTML = '';
         score.innerHTML = `Cards Remaining: 0`;
-        alert('You are all done!');
+        alert(
+        `            You are all done!
+        You had ${incorrectCounter} incorrect cards.`);
     }
     score.innerHTML = `Cards Remaining: ${fullDeck.length}`;
 }
@@ -118,6 +129,7 @@ function correct() {
 }
 
 function incorrect() {
+    incorrectCounter += 1
     fullDeck[fullDeck.length] = fullDeck[0];
     fullDeck.shift();
     nextCard();
@@ -126,6 +138,18 @@ function incorrect() {
 function reset() {
     const pmpDeck = [card1,card2,card3,card4,card5,card6,card7,card8,card9];
     playPmpDeck();
+}
+
+function skipf() {
+    fullDeck[fullDeck.length] = fullDeck[0];
+    fullDeck.shift();
+    nextCard();
+}
+
+function skipb() {
+    fullDeck.unshift(fullDeck[fullDeck.length - 1]);
+    fullDeck.pop();
+    nextCard();
 }
 
 class Card {
