@@ -8,7 +8,7 @@ This _Flashcard_ game will help someone who is studying for their Project Manage
 
 ## ORIENTATION
 
-![Screen shot of the game layout at the start](https://github.com/andybuske/AndyProject1/blob/main/Screen_shot-Initial.png) 
+![Screen shot of the game layout at the start](https://github.com/andybuske/AndyProject1/blob/main/Screen_shot-Initial1.png) 
 
   * The two possible decks are listed, each with their own button.
   * The Category and Deck Name are displayed above the card.
