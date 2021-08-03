@@ -17,7 +17,6 @@ Silver version:
 - Choose deck
 * Progress
 * Red/Green buttons
-- Buttons with 'check' and 'x'
 - Background image for deck
 - Fancy font
 * Reset button
@@ -173,7 +172,7 @@ class Card {
 }
 
 
-// Creating Cards
+// Creating PMP Cards
 const card1 = new Card('Professional', 'PMP', 'What is the OUTPUT of the Develop Project Charter Process?', 'Project Charter');
 const card2 = new Card('Professional', 'PMP', 'What is the Triple Constraint?', `1. Scope <br> 2. Schedule <br> 3. Budget <br> (and Quality)`);
 const card3 = new Card('Professional', 'PMP', 'What are the 5 Process Groups?', `Initiating<br>Planning<br>Executing<br>Monitoring & Controlling<br>Closing`);
@@ -183,8 +182,20 @@ const card6 = new Card('Professional', 'PMP', 'What are OPAs?', 'Organizational 
 const card7 = new Card('Professional', 'PMP', 'What are the Processes in the Initiating Process Group?', `Develop Project Charter<br>Identify Stakeholders`);
 const card8 = new Card('Professional', 'PMP', 'What are the INPUTS to the Collect Requirements Process?', `Scope Management Plan<br>Requirements Management Plan<br>Stakeholder Management Plan<br>Project Charter<br>Stakeholder Register`);
 const card9 = new Card('Professional', 'PMP', 'Project staff assignments and Resource calendars are OUTPUTS of which Process?', 'Acquire Project Team (part of Executing Process Group)');
-
 const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
+
+// Creating Math Deck
+const card10 = new Card('School', 'Math', '12 x 12', '144');
+const card11 = new Card('School', 'Math', '64 ^-2', '8');
+const card12 = new Card('School', 'Math', 'Radius of a circle', 'PI * r^2');
+const card13 = new Card('School', 'Math', '12 x 12', '144');
+const card14 = new Card('School', 'Math', '12 x 12', '144');
+const card15 = new Card('School', 'Math', '12 x 12', '144');
+const card16 = new Card('School', 'Math', '12 x 12', '144');
+const card17 = new Card('School', 'Math', '12 x 12', '144');
+const card18 = new Card('School', 'Math', '12 x 12', '144');
+const card19 = new Card('School', 'Math', '12 x 12', '144');
+
 
 playPmpDeck();
 
