@@ -13,8 +13,8 @@ Bronze version:
     * place card in the back of the deck
     * proceed to next card
 Silver version:
-- Multiple decks pre-loaded
-- Choose deck
+* Multiple decks pre-loaded
+* Choose deck
 * Progress
 * Red/Green buttons
 - Background image for deck
@@ -46,6 +46,8 @@ const score = document.querySelector('.score');
 const deckInfo = document.querySelector('.deckInfo');
 const skipButtonF = document.querySelector('#skipf');
 const skipButtonB = document.querySelector('#skipb');
+const pmpButton = document.querySelector('#pmpGame');
+const mathButton = document.querySelector('#mathGame');
 let incorrectCounter = 0;
 
 
@@ -57,6 +59,8 @@ incorrButton.addEventListener('click', incorrect);
 resetButton.addEventListener('click', reset);
 skipButtonF.addEventListener('click', skipf);
 skipButtonB.addEventListener('click', skipb);
+pmpButton.addEventListener('click', playPmpDeck);
+mathButton.addEventListener('click', playMathDeck);
 
 
 /* testing get flip functionality to work
@@ -91,6 +95,13 @@ function playPmpDeck() {     //specific to PMP Flashcards
     nextCard();
 }
 
+function playMathDeck() {     //specific to Math Flashcards
+    fullDeck = mathDeck;
+    deckInfo.innerText = 'Category: ' + fullDeck[0].category + '\xa0\xa0\xa0\xa0\xa0\xa0Deck: ' + fullDeck[0].deck;
+    // deckInfo.innerHTML = `Category:  ${fullDeck[0].category}    /n    Deck: ${fullDeck[0].deck}`;
+    score.innerHTML = `Cards Remaining: ${fullDeck.length}`;
+    nextCard();
+}
 // function buildDeck() {       //generic function that can later be used for any Deck
 //     for (let i=0; i<fullDeck; i++) {
 
@@ -182,20 +193,21 @@ const card6 = new Card('Professional', 'PMP', 'What are OPAs?', 'Organizational 
 const card7 = new Card('Professional', 'PMP', 'What are the Processes in the Initiating Process Group?', `Develop Project Charter<br>Identify Stakeholders`);
 const card8 = new Card('Professional', 'PMP', 'What are the INPUTS to the Collect Requirements Process?', `Scope Management Plan<br>Requirements Management Plan<br>Stakeholder Management Plan<br>Project Charter<br>Stakeholder Register`);
 const card9 = new Card('Professional', 'PMP', 'Project staff assignments and Resource calendars are OUTPUTS of which Process?', 'Acquire Project Team (part of Executing Process Group)');
-const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
+const card10 = new Card('Professional', 'PMP', 'Critical Path', 'The sequence of activities that represents the longest path through a project, which determines the shortest possible duration');
+const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10];
 
 // Creating Math Deck
-const card10 = new Card('School', 'Math', '12 x 12', '144');
-const card11 = new Card('School', 'Math', '64 ^-2', '8');
-const card12 = new Card('School', 'Math', 'Radius of a circle', 'PI * r^2');
-const card13 = new Card('School', 'Math', '12 x 12', '144');
+const card11 = new Card('School', 'Math', '12 x 12', '144');
+const card12 = new Card('School', 'Math', '64 ^-2', '8');
+const card13 = new Card('School', 'Math', 'Radius of a circle', 'PI * r^2');
 const card14 = new Card('School', 'Math', '12 x 12', '144');
 const card15 = new Card('School', 'Math', '12 x 12', '144');
 const card16 = new Card('School', 'Math', '12 x 12', '144');
 const card17 = new Card('School', 'Math', '12 x 12', '144');
 const card18 = new Card('School', 'Math', '12 x 12', '144');
 const card19 = new Card('School', 'Math', '12 x 12', '144');
+const card20 = new Card('School', 'Math', '12 x 12', '144');
+const mathDeck = [card11, card12, card13, card14, card15, card16, card17, card18, card19, card20];
 
-
-playPmpDeck();
+// playPmpDeck();
 
