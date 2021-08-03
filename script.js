@@ -20,7 +20,7 @@ Silver version:
 - Buttons with 'check' and 'x'
 - Background image for deck
 - Fancy font
-- Reset button
+* Reset button
 - Keyboard flip
 * 'Skip' button
 Gold version:
@@ -142,8 +142,9 @@ function incorrect() {
     nextCard();
 }
 
-function reset() {
-    const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
+function reset() {    //just re-load page
+    // const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
+    window.location.reload(true);
     playPmpDeck();
 }
 
