@@ -60,11 +60,11 @@ The Alert states how many cards you got wrong.
 *  Move Incorrect card to random place in the deck
 
 
-
-
-
-
-
+## Technologies Used
+* Visual Studio Code: code with HTML, CSS & JavaScript
+* FireFox Developer Tools: debug code
+* GitHub Pages: deploy my page
+* Command Line: manage repos and perform change control
 
 
 
