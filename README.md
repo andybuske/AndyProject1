@@ -49,9 +49,9 @@ The Alert states how many cards you got wrong.
 *  _Skip_ functionality
 *  Display score at the end
 *  _Reset_ button
+*  Multiple decks pre-loaded
 
 ### Future Features
-*  Multiple decks pre-loaded
 *  Fancy fonts
 *  Background images for cards
 *  Keyboard controls
