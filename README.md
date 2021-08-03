@@ -10,6 +10,7 @@ This _Flashcard_ game will help someone who is studying for their Project Manage
 
 ![Screen shot of the game layout at the start](https://github.com/andybuske/AndyProject1/blob/main/Screen_shot-Initial.png) 
 
+  * The two possible decks are listed, each with their own button.
   * The Category and Deck Name are displayed above the card.
   * Front of card (question) is shown with a blue card outline and is displayed large centered on the card.
   * Back of card is initially hidden.  Once clicked, the back of the card (answer) is shown with a red outline and is displayed smaller in the upper left corner of the card.
@@ -19,7 +20,9 @@ This _Flashcard_ game will help someone who is studying for their Project Manage
 
 
 ## GAME PLAY
-The deck automatically displays the first question when the page is loaded.   
+The deck automatically displays a blank card when the page is loaded.  
+  You can flip the card or skip forward/back without impacting game play (UX).
+You simply click one of the Deck buttons at the top to load a deck and begin playing. 
 Once you answer the question, click anywhere on the card to flip it to the back side to see the answer.
   * If you got it right, click the _Correct_ button.  You will not see this card again.
   * If you got it wrong, click the _Incorrect_ button.  You will see this card again at the end.
