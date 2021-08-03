@@ -45,12 +45,12 @@ The Alert states how many cards you got wrong.
 *  Red/Green buttons (for UX)
 *  _Skip_ functionality
 *  Display score at the end
+*  _Reset_ button
 
 ### Future Features
 *  Multiple decks pre-loaded
 *  Fancy fonts
 *  Background images for cards
-*  _Reset_ button
 *  Keyboard controls
 *  Add your own Decks and Cards
 *  Get Deck from an API
