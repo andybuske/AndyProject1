@@ -197,15 +197,15 @@ const card10 = new Card('Professional', 'PMP', 'Critical Path', 'The sequence of
 const pmpDeck = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10];
 
 // Creating Math Deck
-const card11 = new Card('School', 'Math', '12 x 12', '144');
+const card11 = new Card('School', 'Math', `99 bottles of beer on the wall <br> Take one down <br> How many are left?`, '98 bottles of beer on the wall');
 const card12 = new Card('School', 'Math', '64 ^-2', '8');
 const card13 = new Card('School', 'Math', 'Radius of a circle', 'PI * r^2');
-const card14 = new Card('School', 'Math', '12 x 12', '144');
-const card15 = new Card('School', 'Math', '12 x 12', '144');
-const card16 = new Card('School', 'Math', '12 x 12', '144');
-const card17 = new Card('School', 'Math', '12 x 12', '144');
-const card18 = new Card('School', 'Math', '12 x 12', '144');
-const card19 = new Card('School', 'Math', '12 x 12', '144');
+const card14 = new Card('School', 'Math', '1 + 7', '8');
+const card15 = new Card('School', 'Math', 'Total of all angles of a triangle', '180 degrees');
+const card16 = new Card('School', 'Math', 'Circumference of a circle', 'PI * diameter');
+const card17 = new Card('School', 'Math', '160 - 14', '146');
+const card18 = new Card('School', 'Math', '19 x 19', '361');
+const card19 = new Card('School', 'Math', 'Number of sides on an octagon', '8');
 const card20 = new Card('School', 'Math', '12 x 12', '144');
 const mathDeck = [card11, card12, card13, card14, card15, card16, card17, card18, card19, card20];
 
