@@ -2,13 +2,13 @@
 
 ## DESCRIPTION  
 This _Flashcard_ game will help someone who is studying for their Project Management Professional [exam].
-  * It is based on the _PMBOK Guide: Fifth Edition_
+  * It is based on the _[PMBOK Guide]: Fifth Edition_
   * It focuses on the Process Groups and Knowledge Areas that are essential material to know for the exam
 
 
 ## ORIENTATION
 
-![Screen shot of the game layout at the start](https://github.com/andybuske/AndyProject1/blob/main/Screen_shot-Initial.png) 
+![Screen shot of the game layout at the start](https://github.com/andybuske/AndyProject1/blob/main/Screen_shot-Initial1.png) 
 
   * The two possible decks are listed, each with their own button.
   * The Category and Deck Name are displayed above the card.
@@ -72,3 +72,4 @@ The Alert states how many cards you got wrong.
 
 
 [exam]: https://www.pmi.org/certifications/project-management-pmp 
+[PMBOK Guide]: https://www.amazon.com/Guide-Project-Management-Knowledge-PMBOK®/dp/1935589679
